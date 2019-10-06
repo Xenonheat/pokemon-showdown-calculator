@@ -20,6 +20,7 @@
     "aws-serverless-koa": "^1.0.1",
     "core-js": "^3.2.1",
     "eslint": "^6.4.0",
+    "fresh": "^0.5.2",
     "koa": "^2.0.0-alpha.8",
     "koa-router": "^8.0.0-alpha.1",
     "serverless": "^1.53.0",
