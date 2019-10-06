@@ -8,7 +8,7 @@ services:
     volumes:
       - ./db:/docker-entrypoint-initdb.d
     environment:
-      MYSQL_ROOT_PASSWORD: vim
-      MYSQL_DATABASE: vim
-      MYSQL_USER: vim
-      MYSQL_PASSWORD: vim
+      MYSQL_ROOT_PASSWORD: pokemon
+      MYSQL_DATABASE: pokemon
+      MYSQL_USER: pokemon
+      MYSQL_PASSWORD: pokemon
