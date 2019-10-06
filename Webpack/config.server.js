@@ -40,7 +40,6 @@ const webpackPlugins = [
 // Webpack Configuration Object
 const webpackConfiguration = {
   context: CWD,
-  // entry: `${SRC}/utility/server/index.js`,
   entry: slsw.lib.entries,
   externals: [WebpackNodeExternals({
     whitelist: [/\.yml/]
@@ -60,13 +59,7 @@ const webpackConfiguration = {
     }, {
       test: /\.sql$/,
       use: ['raw-loader']
-    }, {
-      test: /\.crt$/,
-      use: ['raw-loader']
-    }, {
-      test: /\.pem$/,
-      use: ['raw-loader']
-    }]
+    }
   },
   devtool: 'eval-source-map',
   output: {

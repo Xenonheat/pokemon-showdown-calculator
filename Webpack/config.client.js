@@ -12,6 +12,7 @@ const CWD = process.cwd()
 // File Constants
 const BIN = path.resolve(CWD, 'build/client')
 const CORE = path.resolve(CWD, 'Core')
+const BASE = path.resolve(CWD, 'Core/Client')
 const SRC = path.resolve(CWD, 'Core/Client/src')
 
 // Environment Constants
@@ -44,8 +45,10 @@ const webpackPlugins = [
 // Webpack Configuration Object
 const webpackConfiguration = {
   context: CWD,
-  entry: `${SRC}/js/app.js`,
-  module: {},
+  entry: `${SRC}/app.js`,
+  module: {
+
+  },
   devtool: !PRODUCTION ? 'eval' : 'source-map',
   output: {
     path: BIN,
@@ -64,12 +67,8 @@ const webpackConfiguration = {
   mode: !PRODUCTION ? 'development' : 'production',
   resolve: {
     alias: {
-      actions: `${CWD}/Actions`,
-      configuration: `${CWD}/Configuration`,
-      constants: `${CWD}/Constants`,
-      handlers: `${CWD}/Handlers`,
-      systems: `${CWD}/Systems`,
-      utility: `${CWD}/Utility`,
+      components: `${SRC}/Components`,
+      assets: `${SRC}/Assets`
     }
   },
   plugins: webpackPlugins
