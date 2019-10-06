@@ -4,7 +4,7 @@ export const addNewPokemonManager = () =>
   new Promise((resolve, reject) => {
     try {
 
-    } catch(error) {
+    } catch (error) {
       console.log(error)
       reject(error)
     }

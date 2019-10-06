@@ -1,5 +1,6 @@
 import Vue from 'vue'
-import VueX from 'vuex'
+import App from './App.vue'
+// import VueX from 'vuex'
 
 Vue.config.productionTip = false
 

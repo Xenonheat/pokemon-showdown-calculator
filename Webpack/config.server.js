@@ -60,6 +60,7 @@ const webpackConfiguration = {
       test: /\.sql$/,
       use: ['raw-loader']
     }
+    ]
   },
   devtool: 'eval-source-map',
   output: {
@@ -73,6 +74,7 @@ const webpackConfiguration = {
       handler: `${SRC}/handler`,
       configuration: `${SRC}/configuration`,
       constant: `${BASE}/constant`,
+      Common: `${CORE}/Common`,
       middleware: `${SRC}/middleware`,
       routes: `${BASE}/routes`,
       system: `${SRC}/system`,

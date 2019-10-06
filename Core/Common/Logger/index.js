@@ -1,34 +1,34 @@
-import { performance } from 'perf_hooks'
+// import { performance } from 'perf_hooks'
 
-export default (type, message) => {
+// export default (type, message) => {
 
-}
+// }
 
-const levels = [
-  error,
-  warn,
-  verbose,
-  debug,
-  info,
-  log,
-  off
-]
+// const levels = [
+//   error,
+//   warn,
+//   verbose,
+//   debug,
+//   info,
+//   log,
+//   off
+// ]
 
-export const checkLevel = () => {
+// export const checkLevel = () => {
 
-}
+// }
 
-export const setLevel = () => {
+// export const setLevel = () => {
 
-}
+// }
 
-export const getLocation = () => {
+// export const getLocation = () => {
 
-}
+// }
 
-export const getTime = () => {
-  return {
-    date1: perfomance.mark('start'),
-    date2: new Date()
-  }
-}
+// export const getTime = () => {
+//   return {
+//     date1: perfomance.mark('start'),
+//     date2: new Date()
+//   }
+// }

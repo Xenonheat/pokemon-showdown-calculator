@@ -2,7 +2,6 @@
   "presets": [
     [
       "@babel/preset-env", // Based on NPM installed Babel preset env
-      "@vue/app", // Based on Vue/Cli
       {
         "useBuiltIns": "entry", // Polyfill option enabled resolving use of core-js
         "corejs": "3.2.1", // Specify version of core that I will develop the application on
