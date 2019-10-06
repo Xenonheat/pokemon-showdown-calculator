@@ -1,6 +1,6 @@
 // import * as pokemonSystemManager from 'system/system-manager/pokemon'
 
-export const deletePokemon = () =>
+export const deletePokemon = (req, res, next) =>
   new Promise((resolve, reject) => {
     try {
 

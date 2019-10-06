@@ -1,6 +1,6 @@
 // import * as pokemonSystemManager from 'system/system-manager/pokemon'
 
-export const addNewPokemon = () =>
+export const addNewPokemon = (req, res, next) =>
   new Promise((resolve, reject) => {
     try {
 
