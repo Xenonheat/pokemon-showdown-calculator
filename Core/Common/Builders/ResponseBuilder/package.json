@@ -1,0 +1,29 @@
+{
+  "name": "PokemonShowdownDmgCalc-Server-ResponseBuilder",
+  "version": "1.0.0",
+  "description": "Response builder used to deliver responses back to client",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && npm run webpack:server",
+    "start:server": "npm run build && node ./Build/Server/server.bundle.js",
+    "test": "standard --fix --verbose | snazzy",
+    "webpack:server": "webpack --config ./Webpack/config.server.js",
+    "webpack:client": "webpack --config ./Webpack/config.client.js"
+  },
+  "keywords": [],
+  "author": "Olufemi Adesina",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  }
+}

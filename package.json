@@ -1,0 +1,44 @@
+{
+  "name": "PokemonShowdownDmgCalc",
+  "version": "1.0.0",
+  "description": "A pokemon showdown slightly more effective calculator.",
+  "scripts": {
+    "build": "rm -rf build && npm run webpack:server",
+    "local:offline": "AWS_SHARED_CREDENTIALS_FILE=./.aws-credentials AWS_XRAY_CONTEXT_MISSING=LOG_ERROR npm run serverless -- offline start --stage staging --location Build/Serverless/Functions/service",
+    "serverless": "AWS_PROFILE=default serverless",
+    "start:server": "npm run build && node ./Build/Server/server.bundle.js",
+    "start": "rm -rf Build/ && npm run local:offline && npm run watch",
+    "test": "standard --fix --verbose | snazzy",
+    "webpack:server": "webpack --config ./Webpack/config.server.js",
+    "webpack:client": "webpack --config ./Webpack/config.client.js",
+    "watch": "onchange \"Core/**/*.js\" \"Webpack/*.js\" -- npm run test"
+  },
+  "keywords": [],
+  "author": "Olufemi Adesina",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-koa": "^1.0.1",
+    "core-js": "^3.2.1",
+    "eslint": "^6.4.0",
+    "koa": "^2.0.0-alpha.8",
+    "koa-router": "^8.0.0-alpha.1",
+    "serverless": "^1.53.0",
+    "snazzy": "^8.0.0",
+    "standard": "^14.3.1",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-sql": "^1.1.1",
+    "raw-loader": "^1.0.0",
+    "serverless-offline": "^5.11.0",
+    "serverless-webpack": "^5.3.1",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "yaml-loader": "^0.5.0"
+  }
+}

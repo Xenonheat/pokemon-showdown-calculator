@@ -1,0 +1,48 @@
+{
+  "env": {
+    "browser": true,
+    "node": true,
+    "jquery": true,
+    "commonjs": true,
+    "es6": true
+  },
+  "extends": [
+    "standard",
+  ],
+  "plugins": [
+    "json",
+    "sql"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 6, // Infered by the es6 true option in the env object
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "sql/format": [
+      2,
+      {
+        "ignoreExpressions": false,
+        "ignoreInline": true,
+        "ignoreTagless": true
+      }
+    ],
+    "sql/no-unsafe-query": [
+      2,
+      {
+        "allowLiteral": false
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.js"],
+      "rules": {
+        "no-async-promise-executor": "off"
+      }
+    }
+  ]
+}
