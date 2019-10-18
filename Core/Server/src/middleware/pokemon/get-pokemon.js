@@ -13,13 +13,16 @@ export const getPokemon = (req, res, next) =>
       // Construct response
       const response = ResponseBuilder(true, 200, results)
 
-      // Send response back to client
+      // Send success response back to client
       res.json(response)
     } catch (error) {
       // Log Error
       console.log(error)
+
       // Build and send error response
       const response = ResponseBuilder(false, 400, ERROR.GENERIC_ERROR_MESSAGE)
+
+      // Send error response back to client
       res.status(400).json(response)
     }
   })

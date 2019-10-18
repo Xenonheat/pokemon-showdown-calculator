@@ -8,7 +8,6 @@
   },
   "extends": [
     "standard",
-    "plugin:vue/essential"
   ],
   "plugins": [
     "json",
@@ -22,15 +21,6 @@
       "jsx": true
     }
   },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
   "rules": {
     "sql/format": [
       2,

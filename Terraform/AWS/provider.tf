@@ -1,5 +1,12 @@
 provider "aws" {
-  access_key = "AKIA4D5GZRGAWY5YKFGS"
-  secret_key = "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"
-  region = var.REGION
+  access_key  = "${var.ACCESS_KEY}"
+  secret_key  = "${var.SECRET_KEY}"
+  region      = "${var.REGION}"
 }
+
+provider "google" {}
+provider "azure" {}
+
+variable "ACCESS_KEY" {}
+variable "SECRET_KEY" {}
+variable "REGION" {}
